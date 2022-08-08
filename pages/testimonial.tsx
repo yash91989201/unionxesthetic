@@ -15,13 +15,9 @@ const testimonial = ({ allTestimonial }: PageProps) => {
             <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20 ">
                 <p className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
                 {/* testimony card */}
-                <div className="
-                                mx-auto w-full max-w-6xl
-                                flex flex-col  md:flex-row items-center
-                                space-x-0 md:space-x-8 space-y-8 md:space-y-0
-                            ">
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
                     {
-                        allTestimonial?.map(testimonial => <div key={testimonial._id} className="relative w-[240px] h-72">
+                        allTestimonial?.map(testimonial => <div key={testimonial._id} className="relative w-60 h-72">
                             <Image
                                 src={urlFor(testimonial.clientTestimonialImage).url()!}
                                 alt=""

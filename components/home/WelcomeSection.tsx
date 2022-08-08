@@ -8,7 +8,6 @@ import { WelcomeVideoType } from '../../types';
 
 const WelcomeSection = () => {
     const [allVideo, setAllVideo] = useState<WelcomeVideoType[]>()
-    const [videoIndex, setVideoIndex] = useState<number>(0)
     useEffect(() => {
         fetch("/api/fetchWelcomeVideo")
             .then(res => res.json())
@@ -17,29 +16,18 @@ const WelcomeSection = () => {
     }, [])
 
     return (
-        <section className="px-6 sm:px-12">
-            <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20">
+        <section className="px-6 sm:px-12 ">
+            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
                 <h2 className="text-[clamp(16px,6vw,48px)] font-bold text-center italic">WELCOME TO <span className="text-amber-400">UNION XESTHETICS</span></h2>
                 <div className="flex flex-col md:flex-row items-center space-y-8">
                     {/* video board */}
                     <div className="w-full  md:w-1/2  flex flex-col  space-y-4">
-                        {/* main video */}
                         <iframe
                             className="w-full aspect-video"
                             src="https://youtube.com/embed/qZY0d1-Qzpc"
                             allow="encrypted-media"
                         >
                         </iframe>
-                        {/* video reel */}
-                        <div className="flex justify-between space-x-4">
-                            {allVideo?.map((video, index) => <iframe key={video._id}
-                                className="w-full aspect-video"
-                                src={video.welcomeVideoURL}
-                                allow="encrypted-media"
-                            >
-                            </iframe>)}
-
-                        </div>
                     </div>
                     <div className="p-0 md:p-12 w-full md:w-1/2  flex flex-col space-y-4 md:space-y-6">
                         <h3 className="text-xl md:text-3xl  font-semibold italic text-amber-400">ONLINE FITNESS TRAINING</h3>
@@ -56,7 +44,7 @@ const WelcomeSection = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

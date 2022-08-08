@@ -13,42 +13,39 @@ const index = ({ allPosts }: PageProps) => {
         <>
             {/* <HeroSection /> */}
             <section
-                className='
-                            p-2 grid grid-cols-1 gap-3 
-                            sm:grid-cols-2 
-                            lg:grid-cols-3 
-                            md:gap-6 md:p-6
-                        '>
-                {
-                    allPosts.length == 0 ?
-                        <p>No blog posts to show <br /> visit later.</p> :
-                        allPosts.map(post => (
-                            <Link key={post._id} href={`/blog/${post.slug.current}`}>
-                                <div className='border-2 rounded-xl  overflow-hidden group cursor-pointer'>
-                                    <div
-                                        className='relative
-                                w-full h-60 object-cover 
-                                group-hover:scale-105
-                                transition-transform duration-200 ease-in-out
-                            '
-                                    >
-                                        <Image
-                                            src={urlFor(post.mainImage).url()!}
-                                            alt="post image"
-                                            layout="fill"
-                                        />
-                                    </div>
-                                    <div className='flex items-center justify-between p-4 bg-white'>
-                                        <div>
-                                            <p className='text-lg font-bold'>{post.title}</p>
-                                            <p>{post.description} </p>
-                                            <p>by {post.author.name}</p>
+                className="px-6 sm:px-12">
+                <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20">
+                    <h1 className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Blogs</h1>
+                    <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
+                        {
+                            allPosts.length == 0 ?
+                                <p>No blog posts to show <br /> visit later.</p> :
+                                allPosts.map(post => (
+                                    <Link key={post._id} href={`/blog/${post.slug.current}`}>
+                                        <div className='w-full place-self-start  border-2 rounded-xl  overflow-hidden group cursor-pointer'>
+                                            <div
+                                                className="
+                                                        relative
+                                                        w-full aspect-video object-cover 
+                                                        group-hover:scale-105
+                                                        transition-transform duration-200 ease-in-out
+                                            ">
+                                                <Image
+                                                    src={urlFor(post.mainImage).url()!}
+                                                    alt="post image"
+                                                    layout="fill"
+                                                />
+                                            </div>
+                                            <div className='flex flex-col  p-4 bg-gray-600'>
+                                                <p className='text-md sm:text-lg font-bold text-white '>{post.title}</p>
+                                                <p className="text-sm sm:text-md text-white space-y-60">{post.description}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        ))
-                }
+                                    </Link>
+                                ))
+                        }
+                    </div>
+                </div>
             </section >
         </>
     )

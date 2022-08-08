@@ -11,8 +11,8 @@ const Navbar = () => {
     }
 
     return (
-        <header className="px-6 sm:px-12">
-            <div className="relative max-w-6xl mx-auto flex justify-between items-center">
+        <header className="">
+            <div className="relative max-w-6xl mx-auto px-6 sm:px-12 flex justify-between items-center">
                 {/* logo */}
                 <div className="flex-1 md:flex-grow-0 md:flex-shrink-0">
                     <div className="relative w-20 h-20  md:w-24 md:h-24 ">

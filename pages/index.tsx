@@ -9,6 +9,7 @@ import BlogPreviewSection from '../components/home/BlogPreviewSection'
 import TransformationSection from '../components/home/TransformationSection'
 import TestimonialSection from '../components/home/TestimonialSection'
 import StartToday from '../components/home/StartToday'
+import AboutMe from '../components/home/AboutMe'
 
 const Home: NextPage = () => {
   return (
@@ -19,12 +20,13 @@ const Home: NextPage = () => {
       </Head>
       <HeroSection />
       <WelcomeSection />
-      <StartToday />
       <TransformationSection />
       <PlansSection />
       <ReviewSection />
       <BlogPreviewSection />
       <TestimonialSection />
+      {/* <StartToday /> */}
+      <AboutMe />
       {/* about us / description */}
     </div >
   )

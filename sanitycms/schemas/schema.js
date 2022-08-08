@@ -13,7 +13,6 @@ import comment from "./comment";
 import videoReview from "./videoReview";
 import transformation from "./transformation";
 import testimonial from "./testimonial";
-import welcomeVideo from "./welcomeVideo";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,6 +32,5 @@ export default createSchema({
     videoReview,
     transformation,
     testimonial,
-    welcomeVideo,
   ]),
 });

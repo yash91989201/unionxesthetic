@@ -44,7 +44,7 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
                             <BsInstagram className="text-xl md:text-2xl lg:text-3xl  " />
                         </a>
                     </Link>
-                    <Link href="https://wa.me/whatsappphonenumber?text=Hi%2C+I+would+like+to+know+more+about+the+fitness+plan.">
+                    <Link href="https://wa.me/whatsappphonenumber?text=Hi%2C+I+would+like+to+know+more+about+the+fitness+plans.">
                         <a target="_blank" className="p-3  flex items-center   bg-[#25D366] rounded-full space-x-2 group">
                             <BsWhatsapp className="text-xl md:text-2xl lg:text-3xl" />
                         </a>

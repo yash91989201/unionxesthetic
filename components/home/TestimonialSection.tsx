@@ -13,9 +13,9 @@ const TestimonialSection = () => {
             .catch(err => { console.log(err) })
     }, [])
     return (
-        <section className="px-6 sm:px-12">
-            <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20 ">
-                <p className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
+        <section className="px-6 sm:px-12 bg-gray-600">
+            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20 ">
+                <p className="text-[clamp(24px,6vw,48px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
                 {/* testimony card */}
                 <div className="
                                 mx-auto w-full max-w-6xl
@@ -23,7 +23,7 @@ const TestimonialSection = () => {
                                 space-x-0 md:space-x-8 space-y-8 md:space-y-0 
                             ">
                     {
-                        allTestimonial?.slice(0, 3).map(testimonial => <div key={testimonial._id} className="relative w-72 h-96 ">
+                        allTestimonial?.slice(0, 3).map(testimonial => <div key={testimonial._id} className="relative w-56 h-80 ">
                             <Image
                                 src={urlFor(testimonial.clientTestimonialImage).url()!}
                                 alt={testimonial.title}

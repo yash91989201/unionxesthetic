@@ -7,6 +7,7 @@ import { PostType } from "../../types"
 import PortableText from "react-portable-text"
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import BlogPreviewSection from "../../components/home/BlogPreviewSection";
 
 
 interface PageProps {
@@ -33,45 +34,48 @@ const Post = ({ post }: PageProps) => {
     }
     return (
         <main>
-            <div className="relative w-full h-96 px-8 object-cover">
-                <Image src={urlFor(post.mainImage.asset._ref).url()!} alt="" layout="fill" />
-            </div>
-            <div className="">
-                <article className="max-w-4xl mx-auto p-4">
-                    <h1 className="text-3xl my-4">{post.title}</h1>
-                    <h2 className=" text-md font-light text-gray-500">{post.description}</h2>
-                    <div className="my-8 leading-relaxed">
-                        <PortableText
-                            dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-                            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
-                            content={post.body}
-                            serializers={{
-                                h1: (props: any) => (
-                                    <h1 className="text-2xl font-bold my-5" {...props} />
-                                ),
-                                h2: (props: any) => (
-                                    <h2 className="text-xl font-bold my-5" {...props} />
-                                ),
-                                li: ({ children }: any) => (
-                                    <li className="ml-4 list-disc" >{children}</li>
-                                ),
-                                link: ({ href, children }: any) => (
-                                    <a href={href} className="text-blue-500 hover:underline" >{children}</a>
-                                ),
-                            }}
-                        />
+            <div className="max-w-4xl mx-auto px-6 lg:px-0 space-y-8">
+                <div className="">
+                    <h1 className="text-2xl md:text-3xl my-4">{post.title}</h1>
+                    <h2 className=" text-lg font-medium text-gray-500">{post.description}</h2>
+                </div>
+                <div className="flex items-center">
+                    <div className="relative w-8 h-8 rounded-full">
+                        <Image src={urlFor(post.author.image).url()!} alt="" layout="fill" />
                     </div>
-                    <div className="flex items-center">
-                        <div className="relative w-12 h-12 mr-4 rounded-full">
-                            <Image src={urlFor(post.author.image).url()!} alt="" layout="fill" />
-                        </div>
-                        <p className="font-medium text-md text-gray-400">Blog Post by <span className="text-amber-400">{post.author.name}</span>  - Published at {new Date(post._createdAt).toLocaleString()}</p>
-                    </div>
-                </article>
+                    <h3 className="px-4 text-gray-400">By {post.author.name}</h3>
+                </div>
+                <div className="relative aspect-video rounded-md overflow-hidden  ">
+                    <Image src={urlFor(post.mainImage.asset._ref).url()!} alt="" layout="fill" />
+                </div>
             </div>
-            <hr className="max-w-2xl my-5 mx-auto border-amber-400 border-2" />
+            <article className="max-w-4xl mx-auto px-6 lg:px-0">
+                <div className="my-8 leading-relaxed">
+                    <PortableText
+                        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
+                        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+                        content={post.body}
+                        serializers={{
+                            h1: (props: any) => (
+                                <h1 className="text-2xl font-bold my-5" {...props} />
+                            ),
+                            h2: (props: any) => (
+                                <h2 className="text-xl font-bold my-5" {...props} />
+                            ),
+                            li: ({ children }: any) => (
+                                <li className="ml-4 list-disc" >{children}</li>
+                            ),
+                            link: ({ href, children }: any) => (
+                                <a href={href} className="text-blue-500 hover:underline" >{children}</a>
+                            ),
+                        }}
+                    />
+                </div>
+
+            </article>
+            <hr className="max-w-4xl my-5 mx-auto border-amber-400 border-2" />
             {/* comments */}
-            <div className="max-w-2xl mx-auto p-12 m-12 shadow-amber-400 shadow">
+            <div className="max-w-4xl mx-auto p-12 m-12 shadow-amber-400 shadow">
                 <h3 className="text-4xl" >Comments</h3>
                 <hr className="my-6" />
                 {
@@ -92,7 +96,7 @@ const Post = ({ post }: PageProps) => {
             {/* comment form */}
             {
                 formSubmitted ?
-                    <div className="max-w-2xl p-8 mx-auto bg-amber-400 text-white" >
+                    <div className="max-w-4xl p-8 mx-auto bg-amber-400 text-white" >
                         <h2 className="py-2 text-2xl font-bold">
                             Thank your for your awesome comment !!!
                         </h2>
@@ -150,6 +154,7 @@ const Post = ({ post }: PageProps) => {
                         />
                     </form>
             }
+            <BlogPreviewSection />
         </main>
     )
 }

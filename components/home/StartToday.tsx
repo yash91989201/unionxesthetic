@@ -4,7 +4,7 @@ import Image from "next/image"
 const StartToday = () => {
     return (
         <section className="px-6 sm:px-12 bg-gray-600">
-            <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20 ">
+            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20 ">
                 <p className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Start Training Today</p>
                 {/* testimony card */}
                 <div className="flex flex-col md:flex-row md:justify-evenly text-xl text-white space-y-8 md:space-y-0">

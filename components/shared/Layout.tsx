@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link"
 import type { NextComponentType, NextPageContext } from "next";
 // react icons
-import { BsInstagram, BsWhatsapp } from "react-icons/bs"
+import { BsInstagram, BsWhatsapp, BsTelephone } from "react-icons/bs"
 import { MdVerticalAlignTop } from "react-icons/md"
 
 // custom components
@@ -32,8 +32,9 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
                 {children}
             </main>
             {/* contact section */}
-            <address className={`fixed left-0 top-[40vh] mx-0.5  min-w-fit ${scrollPopup}  animate-slide-in-left`}>
-                <div className="w-full  flex flex-col text-white space-y-2 ">
+            <address className={`fixed left-0 top-[40vh] mx-1.5  min-w-fit ${scrollPopup}  animate-slide-in-left`}>
+                <div className="w-full flex flex-col text-white space-y-2 ">
+                    {/* instagram link */}
                     <Link href="https://www.instagram.com/union._xesthetic/">
                         <a target="_blank" className="p-3 rounded-full group"
                             style={{
@@ -41,12 +42,19 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
                                 filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 )",
                             }}
                         >
-                            <BsInstagram className="text-xl md:text-2xl lg:text-3xl  " />
+                            <BsInstagram className="text-xl md:text-2xl" />
                         </a>
                     </Link>
-                    <Link href="https://wa.me/whatsappphonenumber?text=Hi%2C+I+would+like+to+know+more+about+the+fitness+plans.">
+                    {/* whatsapp link */}
+                    <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+How+can+I+enroll+in+this+program+%3F">
                         <a target="_blank" className="p-3  flex items-center   bg-[#25D366] rounded-full space-x-2 group">
-                            <BsWhatsapp className="text-xl md:text-2xl lg:text-3xl" />
+                            <BsWhatsapp className="text-xl md:text-2xl " />
+                        </a>
+                    </Link>
+                    {/* contact number */}
+                    <Link href="tel:7205539494">
+                        <a target="_blank" className="p-3  flex items-center   bg-[#4285F4] rounded-full space-x-2 group">
+                            <BsTelephone className="text-xl md:text-2xl " />
                         </a>
                     </Link>
                 </div>
@@ -61,9 +69,7 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
                 <p className="hidden md:block text-xs font-semibold">SCROLL TO TOP</p>
             </button>
             {/* footer */}
-            <footer className="flex justify-center items-center bg-gray-800">
-                <div>
-                </div>
+            <footer className="p-4 flex justify-center items-center bg-gray-800">
                 <p className="text-gray-300 font-semibold">Copyright ©2022 All rights reserved | Made by yash</p>
             </footer>
         </>

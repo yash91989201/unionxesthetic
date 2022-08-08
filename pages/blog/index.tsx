@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import { NextSeo } from "next-seo";
 import { sanityClient, urlFor } from "../../sanity"
 import { PostType } from "../../types";
 import Link from "next/link"
@@ -11,6 +12,10 @@ interface PageProps {
 const index = ({ allPosts }: PageProps) => {
     return (
         <>
+            <NextSeo
+                title="Union Xesthetic - Blogs"
+                description=""
+            />
             {/* <HeroSection /> */}
             <section
                 className="px-6 sm:px-12">

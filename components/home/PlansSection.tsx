@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const PlansSection = () => {
     return (
-        <section id="fitnessPlans" className="px-6 sm:px-12">
+        <section className="px-6 sm:px-12">
             <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
                 <div className="space-y-4">
                     <h4 className="text-[clamp(16px,8vw,48px)] font-bold text-center italic">FITNESS PLANS</h4>
@@ -23,7 +23,7 @@ const PlansSection = () => {
                             <li>Whastapp Access</li>
                         </ul>
                         {/* section 3 */}
-                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+4+week+fitness+plan+.+What+is+the+process+to+enroll+%3F">
+                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+4+week+plan.+How+can+I+enroll+for+it+%3F">
                             <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;799</a>
                         </Link>
                     </div>
@@ -43,7 +43,7 @@ const PlansSection = () => {
                             <li>Personal Notes</li>
                         </ul>
                         {/* section 3 */}
-                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+8+week+fitness+plan+.+What+is+the+process+to+enroll+%3F">
+                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+8+week+plan.+How+can+I+enroll+for+it+%3F">
 
                             <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1299</a>
                         </Link>
@@ -66,7 +66,7 @@ const PlansSection = () => {
                             <li>Personal Notes</li>
                         </ul>
                         {/* section 3 */}
-                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+12+week+fitness+plan+.+What+is+the+process+to+enroll+%3F">
+                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+12+week+plan.+How+can+I+enroll+for+it+%3F">
 
                             <a className="p-4 w-full bg-amber-400 t text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1499</a>
                         </Link>
@@ -74,8 +74,8 @@ const PlansSection = () => {
                 </div>
                 {/* whatsapp link */}
                 <div className="flex justify-center">
-                    <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+plan+and+would+like+to+enroll.">
-                        <a target="_blank" className="p-2 sm:p-4  rounded-full bg-amber-400  hover:bg-amber-500 active:bg-amber-600 text-sm sm:text-md text-center font-bold text-white">CONTACT ON WHATSAPP TO ENROLL </a>
+                    <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+How+can+I+enroll+in+this+program+%3F">
+                        <a target="_blank" className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">ENROLL NOW</a>
                     </Link>
                 </div>
             </div>

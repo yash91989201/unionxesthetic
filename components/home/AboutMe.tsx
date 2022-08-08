@@ -7,8 +7,7 @@ const AboutMe = () => {
       <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
         <h2 className="text-[clamp(16px,6vw,48px)] font-bold text-center italic">About Me</h2>
         <div className="flex flex-col md:flex-row justify-evenly items-center space-y-8">
-
-          <div className="relative max-w-sm  w-full  md:w-1/2 aspect-square flex flex-col  space-y-4">
+          <div className="relative max-w-sm  w-full  md:w-1/2 h-[480px] flex flex-col  space-y-4">
             <Image
               src="/assets/images/aboutme_img.jpg"
               alt="about me img"

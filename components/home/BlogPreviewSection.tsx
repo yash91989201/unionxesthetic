@@ -45,7 +45,7 @@ const BlogPreviewSection = () => {
                 </div >
                 <div className="max-w-6xl mx-auto flex justify-center ">
                     <Link href="/blog">
-                        <a className="py-3 px-6 rounded-full  text-md md:text-xl text-white font-semibold bg-amber-400 text-center hover:bg-amber-500 active:bg-amber-600 ">Visit our blog page</a>
+                        <a className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">Visit our blog page</a>
                     </Link>
                 </div>
             </div>

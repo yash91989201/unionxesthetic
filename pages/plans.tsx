@@ -1,8 +1,15 @@
+import { NextSeo } from "next-seo"
 import PlansSection from "../components/home/PlansSection"
 
 const plans = () => {
     return (
-        <PlansSection />
+        <>
+            <NextSeo
+                title="Fitness Plans"
+                description=""
+            />
+            <PlansSection />
+        </>
     )
 }
 

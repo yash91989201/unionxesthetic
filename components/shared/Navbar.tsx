@@ -61,9 +61,12 @@ const Navbar = () => {
                     </ul>
                 </nav>
                 {/* primary cta */}
-                <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+plan+and+would+like+to+enroll+for+a+plan.">
-                    <a target="_blank" className="hidden sm:block sm:mx-3 md:mx-0  py-2 px-4 rounded-full  font-semibold text-white bg-amber-400 text-sm hover:bg-amber-500">
-                        Join Now
+                <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+What+kind+of+fitness+plans+do+you+offer+%3F">
+                    <a
+                        target="_blank"
+                        className="hidden sm:block py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white"
+                    >
+                        Join Today
                     </a>
                 </Link>
                 {/* menu button */}
@@ -107,8 +110,8 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+plan+and+would+like+to+enroll+for+a+plan.">
-                                <a className="  py-2 px-4 justify-self-center rounded-full  text-center bg-amber-400 text-white  ">Join Now</a>
+                            <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+What+kind+of+fitness+plans+do+you+offer+%3F">
+                                <a className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">Join Today</a>
                             </Link>
                         </li>
                     </ul>

@@ -36,9 +36,9 @@ const WelcomeSection = () => {
                             A small river named Duden flows by their place and supplies it with the necessary regelialia.he coast of the Semantics, a large language ocean.
                         </p>
                         {/* join link */}
-                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+plan+and+would+like+to+enroll.">
-                            <a target="_blank" className="self-start py-2 px-4 rounded-full  font-semibold text-white bg-amber-400 text-sm hover:bg-amber-500 focus:bg-amber-600">
-                                Join Today &#33;
+                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+What+kind+of+fitness+plans+do+you+offer+%3F">
+                            <a target="_blank" className="self-start py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">
+                                Join Today
                             </a>
                         </Link>
                     </div>

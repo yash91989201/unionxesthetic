@@ -1,9 +1,9 @@
-import { GetServerSideProps } from "next";
+import Image from "next/image";
 import { NextSeo } from "next-seo";
 import { sanityClient } from "../sanity"
-import { TransformationType } from "../types"
-import Image from "next/image";
 import { urlFor } from "../sanity"
+import { GetServerSideProps } from "next";
+import { TransformationType } from "../types"
 
 interface PageProps {
     allTransformation: TransformationType[]

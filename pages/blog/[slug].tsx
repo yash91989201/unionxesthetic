@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { NextSeo } from "next-seo";
-import { GetStaticPaths, GetStaticProps } from "next"
-import { sanityClient, urlFor } from "../../sanity"
 import Image from "next/image"
-
-import { PostType } from "../../types"
-import PortableText from "react-portable-text"
-
 import { useForm, SubmitHandler } from "react-hook-form";
+import PortableText from "react-portable-text"
+import { sanityClient, urlFor } from "../../sanity"
+import { GetStaticPaths, GetStaticProps } from "next"
+import { PostType } from "../../types"
+// custom components
 import BlogPreviewSection from "../../components/home/BlogPreviewSection";
 
 

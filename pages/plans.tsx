@@ -1,4 +1,5 @@
 import { NextSeo } from "next-seo"
+// custom components
 import PlansSection from "../components/home/PlansSection"
 
 const plans = () => {

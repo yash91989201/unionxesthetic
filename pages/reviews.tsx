@@ -1,6 +1,6 @@
-import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
 import { sanityClient } from "../sanity"
+import { GetServerSideProps } from "next";
 import { ClientReviewType } from "../types"
 
 interface PageProps {

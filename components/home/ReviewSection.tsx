@@ -13,7 +13,7 @@ const ReviewSection = () => {
     return (
         <section className="px-6 sm:px-12 bg-gray-600">
             <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20 ">
-                <p className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Client Reviews</p>
+                <p className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">Client Reviews</p>
                 {/* review card */}
                 <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
                     {
@@ -27,7 +27,7 @@ const ReviewSection = () => {
                 </div>
                 <div className="max-w-6xl mx-auto flex justify-center ">
                     <Link href="/reviews">
-                        <a className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg  font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">More Reviews</a>
+                        <a className="py-2 px-4 md:px-6 rounded-full text-sm lg:text-lg  font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">More Reviews</a>
                     </Link>
                 </div>
             </div>

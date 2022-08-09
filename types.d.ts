@@ -55,7 +55,7 @@ export interface TransformationType {
   title: string;
 }
 
-export interface TesnimonialType {
+export interface TestimonialType {
   _id: string;
   clientTestimonialImage: {
     asset: {

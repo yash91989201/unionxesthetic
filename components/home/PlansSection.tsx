@@ -5,11 +5,11 @@ const PlansSection = () => {
         <section className="px-6 sm:px-12">
             <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
                 <div className="space-y-4">
-                    <h4 className="text-[clamp(16px,8vw,48px)] font-bold text-center italic">FITNESS PLANS</h4>
+                    <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">FITNESS PLANS</h4>
                     <h2 className="text-md sm:text-xl text-center  font-semibold text-white italic">Let us help you achieve your goal with a solid workout plan.</h2>
                 </div>
                 {/* cards section */}
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-12 place-items-center ">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-12 place-items-center ">
                     {/* single card */}
                     <div className="w-full flex flex-col rounded-lg place-self-start  bg-gray-600 space-y-6 overflow-hidden">
                         {/* section 1 */}
@@ -75,7 +75,7 @@ const PlansSection = () => {
                 {/* whatsapp link */}
                 <div className="flex justify-center">
                     <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+How+can+I+enroll+in+this+program+%3F">
-                        <a target="_blank" className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">ENROLL NOW</a>
+                        <a target="_blank" className="py-2 px-4 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">ENROLL NOW</a>
                     </Link>
                 </div>
             </div>

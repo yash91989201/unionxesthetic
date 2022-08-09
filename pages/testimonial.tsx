@@ -1,12 +1,12 @@
-import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
-import { sanityClient } from "../sanity"
-import { TesnimonialType } from "../types"
 import Image from "next/image";
+import { sanityClient } from "../sanity"
 import { urlFor } from "../sanity"
+import { GetServerSideProps } from "next";
+import { TestimonialType } from "../types"
 
 interface PageProps {
-    allTestimonial: TesnimonialType[]
+    allTestimonial: TestimonialType[]
 }
 
 const testimonial = ({ allTestimonial }: PageProps) => {

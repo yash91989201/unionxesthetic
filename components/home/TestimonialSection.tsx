@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { TesnimonialType, } from "../../types"
-import { urlFor } from "../../sanity"
 import Link from "next/link"
 import Image from "next/image"
+import { urlFor } from "../../sanity"
+import { TestimonialType } from "../../types"
 
 const TestimonialSection = () => {
-    const [allTestimonial, setAllTestimonial] = useState<TesnimonialType[]>()
+    const [allTestimonial, setAllTestimonial] = useState<TestimonialType[]>()
     useEffect(() => {
         fetch("/api/fetchTestimonial")
             .then(res => res.json())
@@ -15,15 +15,11 @@ const TestimonialSection = () => {
     return (
         <section className="px-6 sm:px-12 bg-gray-600">
             <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20 ">
-                <p className="text-[clamp(24px,6vw,48px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
+                <p className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
                 {/* testimony card */}
-                <div className="
-                                mx-auto w-full max-w-6xl
-                                flex flex-col flex-rap md:flex-row justify-center items-center
-                                space-x-0 md:space-x-8 space-y-8 md:space-y-0 
-                            ">
+                <div className=" flex flex-col flex-rap md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-8 md:space-y-0  ">
                     {
-                        allTestimonial?.slice(0, 3).map(testimonial => <div key={testimonial._id} className="relative w-56 h-80 ">
+                        allTestimonial?.slice(0, 3).map(testimonial => <div key={testimonial._id} className="relative w-48 sm:w-56 h-80 ">
                             <Image
                                 src={urlFor(testimonial.clientTestimonialImage).url()!}
                                 alt={testimonial.title}
@@ -34,7 +30,7 @@ const TestimonialSection = () => {
                 </div>
                 <div className="max-w-6xl mx-auto flex justify-center ">
                     <Link href="/testimonial">
-                        <a className="py-1 px-4 md:py-2 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">See More</a>
+                        <a className="py-2 px-4 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">See More</a>
                     </Link>
                 </div>
             </div>

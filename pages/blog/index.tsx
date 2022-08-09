@@ -1,9 +1,9 @@
-import { GetServerSideProps } from "next";
-import { NextSeo } from "next-seo";
-import { sanityClient, urlFor } from "../../sanity"
-import { PostType } from "../../types";
 import Link from "next/link"
 import Image from "next/image"
+import { NextSeo } from "next-seo";
+import { sanityClient, urlFor } from "../../sanity"
+import { GetServerSideProps } from "next";
+import { PostType } from "../../types";
 
 interface PageProps {
     allPosts: PostType[]

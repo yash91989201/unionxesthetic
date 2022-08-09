@@ -4,7 +4,6 @@ import type { NextComponentType, NextPageContext } from "next";
 // react icons
 import { BsInstagram, BsWhatsapp, BsTelephone } from "react-icons/bs"
 import { MdVerticalAlignTop } from "react-icons/md"
-
 // custom components
 import Navbar from "./Navbar"
 
@@ -32,7 +31,7 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
                 {children}
             </main>
             {/* contact section */}
-            <address className={`fixed left-0 top-[40vh] mx-1.5  min-w-fit ${scrollPopup}  animate-slide-in-left`}>
+            <address className={`fixed left-0 top-[32vh] mx-1.5  min-w-fit ${scrollPopup}  animate-slide-in-left`}>
                 <div className="w-full flex flex-col text-white space-y-2 ">
                     {/* instagram link */}
                     <Link href="https://www.instagram.com/union._xesthetic/">
@@ -70,7 +69,7 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
             </button>
             {/* footer */}
             <footer className="p-4 flex justify-center items-center bg-gray-800">
-                <p className="text-gray-300 font-semibold">Copyright ©2022 All rights reserved | Made by yash</p>
+                <p className="text-gray-200 font-semibold"><small>Copyright &copy; {new Date().getFullYear()} Union Xesthetic | Yashraj Jaiswal</small></p>
             </footer>
         </>
     )

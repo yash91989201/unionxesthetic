@@ -14,13 +14,13 @@ const BlogPreviewSection = () => {
     }, [])
     return (
         <section className="px-6 sm:px-12 ">
-            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
+            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-10 sm:space-y-20">
                 <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">RECENT BLOGS</h4>
                 <div className="
                     mx-auto  md:w-full 
                     flex flex-col md:flex-row justify-between items-center md:items-start
                     space-x-0 md:space-x-8 lg:space-x-12
-                    space-y-8 sm:space-y-16 md:space-y-0 
+                    space-y-12 sm:space-y-16 md:space-y-0 
               ">
                     {
                         allPosts?.slice(0, 3).map(post => (

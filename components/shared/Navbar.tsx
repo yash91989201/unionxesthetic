@@ -17,7 +17,7 @@ const Navbar = () => {
                 <div className="py-3 flex-1 md:flex-grow-0 md:flex-shrink-0">
                     <div className="relative w-12 h-12 md:w-20 md:h-20 ">
                         <Image
-                            src="/assets/images/logo.jpg"
+                            src="/assets/images/logo.png"
                             alt=""
                             layout="fill"
                         />
@@ -37,7 +37,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/blog">
+                            <Link href="/blogs">
                                 <a className={`py-1.5 px-3 ${activeLink("/blog")} hover:underline hover:underline-offset-4`}>Blogs</a>
                             </Link>
                         </li>
@@ -76,47 +76,31 @@ const Navbar = () => {
                     }
                 </button>
                 {/* mobile navigation */}
-                <nav className={`absolute z-[99] top-20  left-0 block  md:hidden w-full ${menu ? "scale-y-100" : "scale-y-0"} origin-top  transition-all`}>
-                    <ul className="p-3 py-6 flex flex-col   bg-gray-600 text-white space-y-4">
-                        <li>
-                            <Link href="/">
-                                <a className={`block p-2 ${activeLink("/")} r`} onClick={() => setMenu(false)}>Home</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/plans">
-                                <a className={`block p-2 ${activeLink("/plans")}`} onClick={() => setMenu(false)}>Plans</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/blog">
-                                <a className={`block p-2 ${activeLink("/blog")}`} onClick={() => setMenu(false)}>Blogs</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/reviews">
-                                <a className={`block p-2 ${activeLink("/reviews")}`} onClick={() => setMenu(false)}>Reviews</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/transformations">
-                                <a className={`block p-2 ${activeLink("/transformations")}`} onClick={() => setMenu(false)}>Transformations</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/testimonials">
-                                <a className={`block p-2 ${activeLink("/testimonials")}`} onClick={() => setMenu(false)}>Testimonials</a>
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+What+kind+of+fitness+plans+do+you+offer+%3F">
-                                <a className="py-2 px-4 md:px-6 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">Join Today</a>
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-
+                <div className={`absolute z-[99] top-[4.525rem] left-0 block  md:hidden w-full ${menu ? "scale-y-100" : "scale-y-0"} origin-top  transition-all`}>
+                    <nav className="p-3 py-6 flex flex-col   bg-gray-600 text-white space-y-3">
+                        <Link href="/">
+                            <a className={`block p-2 ${activeLink("/")}`} onClick={() => setMenu(false)}>Home</a>
+                        </Link>
+                        <Link href="/plans">
+                            <a className={`block p-2 ${activeLink("/plans")}`} onClick={() => setMenu(false)}>Plans</a>
+                        </Link>
+                        <Link href="/blogs">
+                            <a className={`block p-2 ${activeLink("/blog")}`} onClick={() => setMenu(false)}>Blogs</a>
+                        </Link>
+                        <Link href="/reviews">
+                            <a className={`block p-2 ${activeLink("/reviews")}`} onClick={() => setMenu(false)}>Reviews</a>
+                        </Link>
+                        <Link href="/transformations">
+                            <a className={`block p-2 ${activeLink("/transformations")}`} onClick={() => setMenu(false)}>Transformations</a>
+                        </Link>
+                        <Link href="/testimonials">
+                            <a className={`block p-2 ${activeLink("/testimonials")}`} onClick={() => setMenu(false)}>Testimonials</a>
+                        </Link>
+                        <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+your+fitness+training+program+.+What+kind+of+fitness+plans+do+you+offer+%3F">
+                            <a className="w-fit py-2 px-4 rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">Join Today</a>
+                        </Link>
+                    </nav>
+                </div>
             </div>
         </header >
     )

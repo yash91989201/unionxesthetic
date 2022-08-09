@@ -14,8 +14,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <NextSeo
-        title="Home"
-        description=""
+        title="Union Xesthetic"
+        description="Union Xesthetic Fitness training program provides personalized fitness plan for muscle building and fat loss. This is most comprehensive program and trains you for complete health, fitness and performance. Your improvement will happen in all components of physical fitness. You will not only be able to do daily tasks efficiently, but also take part in competitive sports."
       />
       <HeroSection />
       <WelcomeSection />

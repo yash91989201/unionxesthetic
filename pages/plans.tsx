@@ -7,7 +7,7 @@ const plans = () => {
         <>
             <NextSeo
                 title="Fitness Plans"
-                description=""
+                description="Let us help you achieve your goal with a solid workout plan."
             />
             <PlansSection />
         </>

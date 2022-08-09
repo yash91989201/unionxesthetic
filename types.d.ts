@@ -64,10 +64,3 @@ export interface TestimonialType {
   };
   title: string;
 }
-
-export interface WelcomeVideoType {
-  _id: string;
-  title: string;
-  videoId: string;
-  welcomeVideoURL: string;
-}

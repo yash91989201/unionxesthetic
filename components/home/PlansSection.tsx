@@ -3,13 +3,13 @@ import Link from "next/link"
 const PlansSection = () => {
     return (
         <section className="px-6 sm:px-12">
-            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-8 sm:space-y-20">
-                <div className="space-y-4">
+            <div className="max-w-6xl mx-auto py-16 sm:py-20 space-y-10 sm:space-y-20">
+                <div className="space-y-6">
                     <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">FITNESS PLANS</h4>
-                    <h2 className="text-md sm:text-xl text-center  font-semibold text-white italic">Let us help you achieve your goal with a solid workout plan.</h2>
+                    <h2 className="text-md sm:text-xl text-center  font-semibold italic">Let us help you achieve your goal with a solid workout plan.</h2>
                 </div>
                 {/* cards section */}
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-12 place-items-center ">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-12 place-items-center">
                     {/* single card */}
                     <div className="w-full flex flex-col rounded-lg place-self-start  bg-gray-600 space-y-6 overflow-hidden">
                         {/* section 1 */}

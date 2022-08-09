@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
 import { NextSeo } from 'next-seo'
+import type { NextPage } from 'next'
 // custom components
 import HeroSection from '../components/home/HeroSection'
 import WelcomeSection from '../components/home/WelcomeSection'

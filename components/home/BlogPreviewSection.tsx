@@ -24,7 +24,7 @@ const BlogPreviewSection = () => {
               ">
                     {
                         allPosts?.slice(0, 3).map(post => (
-                            <Link key={post._id} href={`/blog/${post.slug.current}`}>
+                            <Link key={post._id} href={`/blogs/${post.slug.current}`}>
                                 <div className="rounded-md max-w-sm  w-full overflow-hidden group cursor-pointer">
                                     <div
                                         className='relative w-full aspect-video object-cover  group-hover:scale-105 transition-transform duration-200 ease-in-out'>

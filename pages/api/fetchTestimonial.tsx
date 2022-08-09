@@ -1,21 +1,18 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { sanityClient } from '../../sanity'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { sanityClient } from '../../sanity'
-
-export default async function fetchTestimonial(
-    req: NextApiRequest,
-    res: NextApiResponse
-) {
-
+export default async function fetchTestimonial(req: NextApiRequest, res: NextApiResponse) {
     try {
         const query = `
-        *[_type == "clientTestimonial"]
+        *[_type == "clientTestimonial" && showOnLandingPage == true] | order(_createdAt desc) [0..2] {
+          _id,
+          clientTestimonialImage,
+          title,
+        }
         `;
         const allTestimonial = await sanityClient.fetch(query)
         res.status(200).json(allTestimonial)
     } catch (err) {
-        console.log(err)
-        res.status(500).json({ message: "Could'nt submit comment", err })
+        res.status(500).json({ message: "Unable to fetch client testimonial", err })
     }
 }

@@ -26,7 +26,7 @@ const index = ({ allPosts }: PageProps) => {
                             allPosts.length == 0 ?
                                 <p>No blog posts to show <br /> visit later.</p> :
                                 allPosts.map(post => (
-                                    <Link key={post._id} href={`/blog/${post.slug.current}`}>
+                                    <Link key={post._id} href={`/blogs/${post.slug.current}`}>
                                         <div className='w-full place-self-start  border-2 rounded-xl  overflow-hidden group cursor-pointer'>
                                             <div
                                                 className="

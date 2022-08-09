@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="relative max-w-6xl mx-auto px-6 sm:px-12 flex justify-between items-center">
                 {/* logo */}
                 <div className="py-3 flex-1 md:flex-grow-0 md:flex-shrink-0">
-                    <div className="relative w-12 h-12 md:w-20 md:h-20 ">
+                    <div className="relative w-12 md:w-16 aspect-square ">
                         <Image
                             src="/assets/images/logo.png"
                             alt=""

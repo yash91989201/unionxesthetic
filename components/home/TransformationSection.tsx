@@ -19,7 +19,7 @@ const TransformationSection = () => {
                 {/* testimony card */}
                 <div className=" flex flex-col  md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-12 md:space-y-0 ">
                     {
-                        allTransformation?.slice(0, 3).map(transformation => <div key={transformation._id} className="relative w-56 sm:w-96 aspect-square">
+                        allTransformation?.map(transformation => <div key={transformation._id} className="relative w-56 sm:w-96 aspect-square">
                             <Image
                                 src={urlFor(transformation.clientTransformationImage).url()!}
                                 alt={transformation.title}

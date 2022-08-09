@@ -19,7 +19,7 @@ const TestimonialSection = () => {
                 {/* testimony card */}
                 <div className=" flex flex-col flex-rap md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-8 md:space-y-0  ">
                     {
-                        allTestimonial?.slice(0, 3).map(testimonial => <div key={testimonial._id} className="relative w-56 sm:w-72 h-[380px]">
+                        allTestimonial?.map(testimonial => <div key={testimonial._id} className="relative w-56 sm:w-72 h-[380px]">
                             <Image
                                 src={urlFor(testimonial.clientTestimonialImage).url()!}
                                 alt={testimonial.title}

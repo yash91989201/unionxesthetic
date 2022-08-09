@@ -1,7 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
 import sanityClient from '@sanity/client'
 import { ClientConfig } from 'next-sanity'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 const config: ClientConfig = {
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
@@ -11,8 +10,6 @@ const config: ClientConfig = {
     apiVersion: "2022-03-25",
 
 }
-
-
 
 const client = sanityClient(config)
 
@@ -32,9 +29,9 @@ export default async function createComment(
             email,
             comment,
         })
+        res.status(200).json({ message: "Successfully added comment" })
     } catch (err) {
         console.log(err)
-        res.status(500).json({ message: "Could'nt submit comment", err })
+        res.status(500).json({ message: "Unable to add comment", err })
     }
-    res.status(200).json({ message: 'Message Submitted' })
 }

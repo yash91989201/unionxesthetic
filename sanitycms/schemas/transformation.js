@@ -5,6 +5,11 @@ export default {
   fields: [
     { title: "Title", name: "title", type: "string" },
     {
+      title: "Show on landing page",
+      name: "showOnLandingPage",
+      type: "boolean",
+    },
+    {
       title: "Client Transformation Image",
       name: "clientTransformationImage",
       type: "image",

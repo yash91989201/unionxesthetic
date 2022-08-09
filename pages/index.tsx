@@ -24,9 +24,7 @@ const Home: NextPage = () => {
       <ReviewSection />
       <BlogPreviewSection />
       <TestimonialSection />
-      {/* <StartToday /> */}
       <AboutMe />
-      {/* about us / description */}
     </div >
   )
 }

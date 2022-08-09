@@ -14,10 +14,10 @@ const Navbar = () => {
         <header className="">
             <div className="relative max-w-6xl mx-auto px-6 sm:px-12 flex justify-between items-center">
                 {/* logo */}
-                <div className="flex-1 md:flex-grow-0 md:flex-shrink-0">
-                    <div className="relative w-20 h-20  md:w-24 md:h-24 ">
+                <div className="py-3 flex-1 md:flex-grow-0 md:flex-shrink-0">
+                    <div className="relative w-12 h-12 md:w-20 md:h-20 ">
                         <Image
-                            src="/assets/images/logo.png"
+                            src="/assets/images/logo.jpg"
                             alt=""
                             layout="fill"
                         />
@@ -48,13 +48,13 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <Link href="/transformation">
-                                <a className={`py-1.5 px-3 ${activeLink("/transformation")} hover:underline hover:underline-offset-4`}>Transformation</a>
+                            <Link href="/transformations">
+                                <a className={`py-1.5 px-3 ${activeLink("/transformations")} hover:underline hover:underline-offset-4`}>Transformations</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/testimonial">
-                                <a className={`py-1.5 px-3 ${activeLink("/testimonial")} hover:underline hover:underline-offset-4`}>Testimonial</a>
+                            <Link href="/testimonials">
+                                <a className={`py-1.5 px-3 ${activeLink("/testimonials")} hover:underline hover:underline-offset-4`}> Testimonials</a>
                             </Link>
                         </li>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
                     <ul className="p-3 py-6 flex flex-col   bg-gray-600 text-white space-y-4">
                         <li>
                             <Link href="/">
-                                <a className={`p-2 ${activeLink("/")}`} onClick={() => setMenu(false)}>Home</a>
+                                <a className={`block p-2 ${activeLink("/")} r`} onClick={() => setMenu(false)}>Home</a>
                             </Link>
                         </li>
                         <li>
@@ -99,13 +99,13 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/transformation">
-                                <a className={`block p-2 ${activeLink("/transformation")}`} onClick={() => setMenu(false)}>Transformation</a>
+                            <Link href="/transformations">
+                                <a className={`block p-2 ${activeLink("/transformations")}`} onClick={() => setMenu(false)}>Transformations</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/testimonial">
-                                <a className={`block p-2 ${activeLink("/testimonial")}`} onClick={() => setMenu(false)}>Testimonial</a>
+                            <Link href="/testimonials">
+                                <a className={`block p-2 ${activeLink("/testimonials")}`} onClick={() => setMenu(false)}>Testimonials</a>
                             </Link>
                         </li>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
                 </nav>
 
             </div>
-        </header>
+        </header >
     )
 }
 

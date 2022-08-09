@@ -1,32 +1,31 @@
-import { NextSeo } from "next-seo";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 import { sanityClient } from "../sanity"
 import { urlFor } from "../sanity"
 import { GetServerSideProps } from "next";
-import { TestimonialType } from "../types"
+import { TransformationType } from "../types"
 
 interface PageProps {
-    allTestimonial: TestimonialType[]
+    allTransformation: TransformationType[]
 }
 
-const testimonial = ({ allTestimonial }: PageProps) => {
+const ReviewSection = ({ allTransformation }: PageProps) => {
 
     return (
-
         <>
             <NextSeo
-                title="Client Testimonials"
+                title="Client Transformations"
                 description=""
             />
             <section className="px-6 sm:px-12">
                 <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-8 sm:space-y-20 ">
-                    <p className="text-[clamp(16px,6vw,48px)] font-bold text-center italic text-amber-400">Client Testimonials</p>
+                    <h2 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">Client Transformations</h2>
                     {/* testimony card */}
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
                         {
-                            allTestimonial?.map(testimonial => <div key={testimonial._id} className="relative w-60 h-72">
+                            allTransformation?.map(transformation => <div key={transformation._id} className="relative w-60 aspect-square">
                                 <Image
-                                    src={urlFor(testimonial.clientTestimonialImage).url()!}
+                                    src={urlFor(transformation.clientTransformationImage).url()!}
                                     alt=""
                                     layout="fill"
                                 />
@@ -39,17 +38,17 @@ const testimonial = ({ allTestimonial }: PageProps) => {
     )
 }
 
-export default testimonial
+export default ReviewSection
 
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const query = `
-                    *[_type == "clientTestimonial"]
+                    *[_type == "clientTransformation"]
                 `;
-    const allTestimonial = await sanityClient.fetch(query)
+    const allTransformation = await sanityClient.fetch(query)
     return {
         props: {
-            allTestimonial
+            allTransformation
         }
     }
 }

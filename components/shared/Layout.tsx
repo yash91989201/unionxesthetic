@@ -69,7 +69,7 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({ children })
             </button>
             {/* footer */}
             <footer className="p-4 flex justify-center items-center bg-gray-800">
-                <p className="text-gray-200 font-semibold"><small>Copyright &copy; {new Date().getFullYear()} Union Xesthetic | Yashraj Jaiswal</small></p>
+                <p className="text-gray-200  text-center font-semibold"><small>Copyright &copy; {new Date().getFullYear()} Union Xesthetic | Yashraj Jaiswal</small></p>
             </footer>
         </>
     )

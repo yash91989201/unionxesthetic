@@ -21,7 +21,7 @@ interface FormProps {
     comment: string;
 }
 
-const Post = ({ post }: PageProps) => {
+const post = ({ post }: PageProps) => {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm<FormProps>();
     const onSubmit: SubmitHandler<FormProps> = async (data) => {
@@ -165,7 +165,7 @@ const Post = ({ post }: PageProps) => {
     )
 }
 
-export default Post
+export default post
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
@@ -207,7 +207,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const post = await sanityClient.fetch(query, {
         slug: params?.slug,
     })
-    console.log(post)
     if (!post) return { notFound: true }
     return {
         props: {

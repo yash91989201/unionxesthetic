@@ -9,14 +9,14 @@ interface PageProps {
     allTestimonial: TestimonialType[]
 }
 
-const testimonial = ({ allTestimonial }: PageProps) => {
+const testimonials = ({ allTestimonial }: PageProps) => {
 
     return (
 
         <>
             <NextSeo
                 title="Client Testimonials"
-                description=""
+                description="Look for your self what our clients have to say."
             />
             <section className="px-6 sm:px-12">
                 <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-10 sm:space-y-20 ">
@@ -39,7 +39,7 @@ const testimonial = ({ allTestimonial }: PageProps) => {
     )
 }
 
-export default testimonial
+export default testimonials
 
 
 export const getServerSideProps: GetServerSideProps = async () => {

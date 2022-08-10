@@ -7,7 +7,7 @@ interface PageProps {
     allReviews: ClientReviewType[]
 }
 
-const ReviewSection = ({ allReviews }: PageProps) => {
+const reviews = ({ allReviews }: PageProps) => {
 
     return (
         <>
@@ -35,7 +35,7 @@ const ReviewSection = ({ allReviews }: PageProps) => {
     )
 }
 
-export default ReviewSection
+export default reviews
 
 
 export const getServerSideProps: GetServerSideProps = async () => {

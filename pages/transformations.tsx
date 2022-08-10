@@ -9,13 +9,13 @@ interface PageProps {
     allTransformation: TransformationType[]
 }
 
-const ReviewSection = ({ allTransformation }: PageProps) => {
+const transformations = ({ allTransformation }: PageProps) => {
 
     return (
         <>
             <NextSeo
                 title="Client Transformations"
-                description=""
+                description="Here we have all the clients that have transformed their lives throught our guidance."
             />
             <section className="px-3 xs:px-6 sm:px-12">
                 <div className="max-w-6xl mx-auto py-8 sm:py-16 space-y-10 sm:space-y-20 ">
@@ -25,7 +25,7 @@ const ReviewSection = ({ allTransformation }: PageProps) => {
                         {
                             allTransformation?.map(transformation => <div key={transformation._id} className="relative w-56 xs:w-64 sm:w-full aspect-square">
                                 <Image
-                                    src={urlFor(transformation.clientTransformationImage).url()!}
+                                    src={urlFor(transformation.transformationsImage).url()!}
                                     alt=""
                                     layout="fill"
                                 />
@@ -38,7 +38,7 @@ const ReviewSection = ({ allTransformation }: PageProps) => {
     )
 }
 
-export default ReviewSection
+export default transformations
 
 
 export const getServerSideProps: GetServerSideProps = async () => {

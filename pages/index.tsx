@@ -10,7 +10,7 @@ import TransformationSection from '../components/home/TransformationSection'
 import TestimonialSection from '../components/home/TestimonialSection'
 import AboutMe from '../components/home/AboutMe'
 
-const Home: NextPage = () => {
+const home: NextPage = () => {
   return (
     <div>
       <NextSeo
@@ -29,4 +29,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default home

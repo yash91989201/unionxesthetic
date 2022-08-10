@@ -21,7 +21,7 @@ interface FormProps {
     comment: string;
 }
 
-const post = ({ post }: PageProps) => {
+const Post = ({ post }: PageProps) => {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm<FormProps>();
     const onSubmit: SubmitHandler<FormProps> = async (data) => {
@@ -165,7 +165,7 @@ const post = ({ post }: PageProps) => {
     )
 }
 
-export default post
+export default Post
 
 export const getStaticPaths: GetStaticPaths = async () => {
 

@@ -25,7 +25,7 @@ const transformations = ({ allTransformation }: PageProps) => {
                         {
                             allTransformation?.map(transformation => <div key={transformation._id} className="relative w-56 xs:w-64 sm:w-full aspect-square">
                                 <Image
-                                    src={urlFor(transformation.transformationsImage).url()!}
+                                    src={urlFor(transformation.clientTransformationImage).url()!}
                                     alt=""
                                     layout="fill"
                                 />

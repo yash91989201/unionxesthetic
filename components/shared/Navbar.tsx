@@ -25,7 +25,7 @@ const Navbar = () => {
                 </div>
                 {/* navigation menu */}
                 <nav className="hidden md:block">
-                    <ul className="flex text-black space-x-4">
+                    <ul className="flex text-black space-x-2 lg:space-x-4">
                         <li>
                             <Link href="/">
                                 <a className={`py-1.5 px-3 ${activeLink("/")} hover:underline hover:underline-offset-4`}>Home</a>

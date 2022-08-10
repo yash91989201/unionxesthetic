@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 
 const AboutMe = () => {
@@ -23,6 +24,9 @@ const AboutMe = () => {
               and happiness by cutting through the hype in the health &amp; fitness business.
               My ideal world is one in which loving and caring for oneself on a daily basis is ingrained in everyday life.
             </p>
+            <Link href="/mycertificates">
+              <a className="py-2 px-4 md:px-6 self-start rounded-full text-sm lg:text-lg font-semibold bg-amber-400 hover:bg-amber-500  active:bg-amber-600 text-white">My Certificates</a>
+            </Link>
           </div>
         </div>
       </div>

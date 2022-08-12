@@ -25,7 +25,7 @@ const BlogPreviewSection = () => {
                     {
                         allPosts?.slice(0, 3).map(post => (
                             <Link key={post._id} href={`/blogs/${post.slug.current}`}>
-                                <div className="rounded-md max-w-sm  w-full overflow-hidden group cursor-pointer">
+                                <div className="rounded-md max-w-sm  w-full overflow-hidden group cursor-pointer border">
                                     <div
                                         className='relative w-full aspect-video object-cover  group-hover:scale-105 transition-transform duration-200 ease-in-out'>
                                         <Image
@@ -34,9 +34,9 @@ const BlogPreviewSection = () => {
                                             layout="fill"
                                         />
                                     </div>
-                                    <div className='flex flex-col  justify-between p-4 sm:p-6 bg-gray-600'>
-                                        <p className='text-md sm:text-lg font-bold text-white '>{post.title}</p>
-                                        <p className="text-sm sm:text-md text-white space-y-60">{post.description}</p>
+                                    <div className='flex flex-col  justify-between p-4 sm:p-6 bg-gray-50'>
+                                        <p className='text-md sm:text-lg font-bold'>{post.title}</p>
+                                        <p className="text-sm sm:text-md space-y-60">{post.description}</p>
                                     </div>
                                 </div>
                             </Link>

@@ -7,7 +7,7 @@ const Navbar = () => {
     const router = useRouter()
     const [menu, setMenu] = useState(false)
     const activeLink = (link: string) => {
-        return router.asPath === link ? "text-amber-400 font-semibold " : ""
+        return router.asPath === link ? "text-amber-400 font-semibold underline underline-offset-4 " : ""
     }
 
     return (
@@ -15,13 +15,15 @@ const Navbar = () => {
             <div className="relative max-w-6xl mx-auto px-6 sm:px-12 flex justify-between items-center">
                 {/* logo */}
                 <div className="py-3 flex-1 md:flex-grow-0 md:flex-shrink-0">
-                    <div className="relative w-12 md:w-16 aspect-square ">
-                        <Image
-                            src="/assets/images/logo.png"
-                            alt=""
-                            layout="fill"
-                        />
-                    </div>
+                    <Link href="/">
+                        <div className="relative w-12 md:w-16 aspect-square cursor-pointer">
+                            <Image
+                                src="/assets/images/logo.png"
+                                alt=""
+                                layout="fill"
+                            />
+                        </div>
+                    </Link>
                 </div>
                 {/* navigation menu */}
                 <nav className="hidden md:block">
@@ -38,7 +40,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link href="/blogs">
-                                <a className={`py-1.5 px-3 ${activeLink("/blog")} hover:underline hover:underline-offset-4`}>Blogs</a>
+                                <a className={`py-1.5 px-3 ${activeLink("/blogs")} hover:underline hover:underline-offset-4`}>Blogs</a>
                             </Link>
                         </li>
                         <li>

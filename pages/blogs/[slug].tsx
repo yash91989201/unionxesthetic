@@ -38,8 +38,8 @@ const Post = ({ post }: PageProps) => {
                 title={post.title}
                 description=""
             />
-            <main>
-                <div className="max-w-4xl mx-auto px-6 lg:px-0 space-y-8">
+            <main className="px-6 sm:px-12">
+                <div className="max-w-3xl space-y-8">
                     <div className="">
                         <h1 className="text-2xl md:text-3xl my-4">{post.title}</h1>
                         <h2 className=" text-lg font-medium text-gray-500">{post.description}</h2>
@@ -54,7 +54,7 @@ const Post = ({ post }: PageProps) => {
                         <Image src={urlFor(post.mainImage.asset._ref).url()!} alt="" layout="fill" />
                     </div>
                 </div>
-                <article className="max-w-4xl mx-auto px-6 lg:px-0">
+                <article className="max-w-3xl">
                     <div className="my-8 leading-relaxed">
                         <PortableText
                             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -76,11 +76,10 @@ const Post = ({ post }: PageProps) => {
                             }}
                         />
                     </div>
-
                 </article>
-                <hr className="max-w-4xl my-5 mx-auto border-amber-400 border-2" />
+                <hr className="max-w-3xl my-5 border-amber-400 border-2" />
                 {/* comments */}
-                <div className="max-w-4xl mx-auto p-12 m-12 shadow-amber-400 shadow">
+                <div className="max-w-3xl p-12 shadow-amber-400 shadow">
                     <h3 className="text-4xl" >Comments</h3>
                     <hr className="my-6" />
                     {
@@ -101,7 +100,7 @@ const Post = ({ post }: PageProps) => {
                 {/* comment form */}
                 {
                     formSubmitted ?
-                        <div className="max-w-4xl p-8 mx-auto bg-amber-400 text-white" >
+                        <div className="max-w-3xl p-8 bg-amber-400 text-white" >
                             <h2 className="py-2 text-2xl font-bold">
                                 Thank your for your awesome comment !!!
                             </h2>
@@ -110,7 +109,7 @@ const Post = ({ post }: PageProps) => {
                             </p>
                         </div>
                         :
-                        <form className="flex flex-col mb-10 p-5 mx-auto max-w-2xl" onSubmit={handleSubmit(onSubmit)}>
+                        <form className="flex flex-col mb-10 p-5 max-w-2xl" onSubmit={handleSubmit(onSubmit)}>
                             <h3 className="text-sm text-amber-500">Enjoyed this article?</h3>
                             <h4 className="text-3xl font-bold">Leave a comment below</h4>
                             <hr className="py-3 mt-2" />

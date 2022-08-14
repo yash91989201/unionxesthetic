@@ -9,7 +9,6 @@ import { PostType } from "../../types"
 // custom components
 import BlogPreviewSection from "../../components/home/BlogPreviewSection";
 
-
 interface PageProps {
     post: PostType
 }
@@ -20,6 +19,21 @@ interface FormProps {
     email: string;
     comment: string;
 }
+
+const contentSerializer = {
+    h1: (props: any) => (
+        <h1 className="text-2xl font-bold my-5" {...props} />
+    ),
+    h2: (props: any) => (
+        <h2 className="text-xl font-bold my-5" {...props} />
+    ),
+    li: ({ children }: any) => (
+        <li className="ml-4 list-disc" >{children}</li>
+    ),
+    link: ({ href, children }: any) => (
+        <a href={href} className="text-blue-500 hover:underline" >{children}</a>
+    ),
+};
 
 const Post = ({ post }: PageProps) => {
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -42,13 +56,13 @@ const Post = ({ post }: PageProps) => {
                 <div className="max-w-3xl space-y-8">
                     <div className="">
                         <h1 className="text-2xl md:text-3xl my-4">{post.title}</h1>
-                        <h2 className=" text-lg font-medium text-gray-500">{post.description}</h2>
+                        <h2 className=" text-lg font-medium text-gray-700">{post.description}</h2>
                     </div>
                     <div className="flex items-center">
-                        <div className="relative w-8 h-8 rounded-full">
+                        <div className="relative w-8 h-8 rounded-full overflow-hidden">
                             <Image src={urlFor(post.author.image).url()!} alt="" layout="fill" />
                         </div>
-                        <h3 className="px-4 text-gray-400">By {post.author.name}</h3>
+                        <h3 className="px-4 text-gray-400">By {post.author.name} posted on {new Date(post._createdAt).toDateString()}</h3>
                     </div>
                     <div className="relative aspect-video rounded-md overflow-hidden  ">
                         <Image src={urlFor(post.mainImage.asset._ref).url()!} alt="" layout="fill" />
@@ -60,20 +74,7 @@ const Post = ({ post }: PageProps) => {
                             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
                             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
                             content={post.body}
-                            serializers={{
-                                h1: (props: any) => (
-                                    <h1 className="text-2xl font-bold my-5" {...props} />
-                                ),
-                                h2: (props: any) => (
-                                    <h2 className="text-xl font-bold my-5" {...props} />
-                                ),
-                                li: ({ children }: any) => (
-                                    <li className="ml-4 list-disc" >{children}</li>
-                                ),
-                                link: ({ href, children }: any) => (
-                                    <a href={href} className="text-blue-500 hover:underline" >{children}</a>
-                                ),
-                            }}
+                            serializers={contentSerializer}
                         />
                     </div>
                 </article>

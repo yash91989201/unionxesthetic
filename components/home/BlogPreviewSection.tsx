@@ -18,7 +18,7 @@ const BlogPreviewSection = () => {
                 <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">RECENT BLOGS</h4>
                 <div className="
                     mx-auto  md:w-full 
-                    flex flex-col md:flex-row justify-between items-center md:items-start
+                    flex flex-col md:flex-row justify-between items-center md:items-start md:justify-start
                     space-x-0 md:space-x-8 lg:space-x-12
                     space-y-12 sm:space-y-16 md:space-y-0 
               ">
@@ -34,9 +34,9 @@ const BlogPreviewSection = () => {
                                             layout="fill"
                                         />
                                     </div>
-                                    <div className='flex flex-col  justify-between p-4 sm:p-6 bg-gray-50'>
-                                        <p className='text-md sm:text-lg font-bold'>{post.title}</p>
-                                        <p className="text-sm sm:text-md space-y-60">{post.description}</p>
+                                    <div className="flex flex-col  p-4 bg-gray-50">
+                                        <p className="text-md sm:text-xl py-3 font-bold">{post.title}</p>
+                                        <p className="text-sm sm:text-md text-gray-600">{post.description.slice(0, 150)}... <span className="font-bold">READ MORE</span></p>
                                     </div>
                                 </div>
                             </Link>

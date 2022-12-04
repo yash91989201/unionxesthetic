@@ -24,7 +24,7 @@ const PlansSection = () => {
                         </ul>
                         {/* section 3 */}
                         <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+4+week+plan.+How+can+I+enroll+for+it+%3F">
-                            <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;799</a>
+                            <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;999</a>
                         </Link>
                     </div>
                     {/* single card */}
@@ -45,7 +45,7 @@ const PlansSection = () => {
                         {/* section 3 */}
                         <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+8+week+plan.+How+can+I+enroll+for+it+%3F">
 
-                            <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1299</a>
+                            <a className="p-4 w-full bg-amber-400  text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1499</a>
                         </Link>
                     </div>
                     {/* single card */}
@@ -68,7 +68,7 @@ const PlansSection = () => {
                         {/* section 3 */}
                         <Link href="https://wa.me/7205539494?text=Hi+%2C+I+am+interested+in+the+12+week+plan.+How+can+I+enroll+for+it+%3F">
 
-                            <a className="p-4 w-full bg-amber-400 t text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1499</a>
+                            <a className="p-4 w-full bg-amber-400 t text-lg sm:text-xl text-center text-white font-semibold">JOIN @ &#8377;1999</a>
                         </Link>
                     </div>
                 </div>

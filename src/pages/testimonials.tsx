@@ -21,7 +21,7 @@ const testimonials = ({ allTestimonial }: PageProps) => {
           </p>
           {/* testimony card */}
           <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]  gap-12 place-items-center sm:place-items-start">
-            {allTestimonial?.map((testimonial) => (
+            {allTestimonial?.map(testimonial => (
               <div key={testimonial._id} className="relative w-80 h-96">
                 <Image
                   src={urlFor(testimonial.clientTestimonialImage).url()!}

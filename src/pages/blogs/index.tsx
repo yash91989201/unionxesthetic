@@ -27,7 +27,7 @@ const index = ({ allPosts }: PageProps) => {
                 No blog posts to show <br /> visit later.
               </p>
             ) : (
-              allPosts.map((post) => (
+              allPosts.map(post => (
                 <Link key={post._id} href={`/blogs/${post.slug.current}`}>
                   <div className="w-full max-w-sm mx-auto overflow-hidden border-2 cursor-pointer md:mx-0 rounded-xl group">
                     <div className="relative object-cover w-full transition-transform duration-200 ease-in-out aspect-video group-hover:scale-105">

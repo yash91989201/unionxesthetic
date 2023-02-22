@@ -7,8 +7,8 @@ const BlogPreviewSection = () => {
   const [allPosts, setAllPosts] = useState<PostType[]>();
   useEffect(() => {
     fetch("/api/fetchPosts")
-      .then((res) => res.json())
-      .then((data) => setAllPosts(data))
+      .then(res => res.json())
+      .then(data => setAllPosts(data))
       .catch(() => {});
   }, []);
   return (
@@ -17,10 +17,8 @@ const BlogPreviewSection = () => {
         <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">
           RECENT BLOGS
         </h4>
-        <div
-          className="flex flex-col items-center justify-between mx-auto space-x-0 space-y-12  md:w-full md:flex-row md:items-start md:justify-start md:space-x-8 lg:space-x-12 sm:space-y-16 md:space-y-0"
-        >
-          {allPosts?.slice(0, 3).map((post) => (
+        <div className="flex flex-col items-center justify-between mx-auto space-x-0 space-y-12 md:w-full md:flex-row md:items-start md:justify-start md:space-x-8 lg:space-x-12 sm:space-y-16 md:space-y-0">
+          {allPosts?.slice(0, 3).map(post => (
             <Link key={post._id} href={`/blogs/${post.slug.current}`}>
               <div className="w-full max-w-sm overflow-hidden border rounded-md cursor-pointer group">
                 <div className="relative object-cover w-full transition-transform duration-200 ease-in-out aspect-video group-hover:scale-105">

@@ -17,7 +17,7 @@ const reviews = ({ allReviews }: PageProps) => {
           </p>
           {/* testimony card */}
           <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
-            {allReviews?.map((review) => (
+            {allReviews?.map(review => (
               <iframe
                 key={review._id}
                 className="w-full max-w-xs aspect-square"

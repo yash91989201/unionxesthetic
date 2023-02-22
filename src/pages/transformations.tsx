@@ -21,7 +21,7 @@ const transformations = ({ allTransformation }: PageProps) => {
           </h2>
           {/* testimony card */}
           <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-6 place-items-center sm:place-items-start">
-            {allTransformation?.map((transformation) => (
+            {allTransformation?.map(transformation => (
               <div
                 key={transformation._id}
                 className="relative w-56 xs:w-64 sm:w-full aspect-square"

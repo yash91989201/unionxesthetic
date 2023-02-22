@@ -37,13 +37,13 @@ const Post = ({ post }: PageProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormProps>();
-  const onSubmit: SubmitHandler<FormProps> = async (data) => {
+  const onSubmit: SubmitHandler<FormProps> = async data => {
     fetch("/api/createComment", {
       method: "POST",
       body: JSON.stringify(data),
     })
       .then(() => setFormSubmitted(true))
-      .catch((err) => console.log(err.type));
+      .catch(err => console.log(err.type));
   };
   return (
     <>
@@ -95,7 +95,7 @@ const Post = ({ post }: PageProps) => {
           {post.comments.length == 0 ? (
             <p className="font-semibold text-gray-400">No comments to show</p>
           ) : (
-            post.comments.map((comment) => (
+            post.comments.map(comment => (
               <div
                 key={comment._id}
                 className="flex flex-col p-6 my-2 bg-gray-100 rounded-md "

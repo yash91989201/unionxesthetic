@@ -5,10 +5,10 @@ const ReviewSection = () => {
   const [allReviews, setAllReviews] = useState<ClientReviewType[]>();
   useEffect(() => {
     fetch("/api/fetchReviews")
-      .then((res) => res.json())
-      .then((data) => setAllReviews(data))
-      .catch((err) => {
-        console.log(err);
+      .then(res => res.json())
+      .then(data => setAllReviews(data))
+      .catch(err => {
+        console.error(err);
       });
   }, []);
   return (
@@ -19,7 +19,7 @@ const ReviewSection = () => {
         </p>
         {/* review card */}
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-12 place-items-center sm:place-items-start">
-          {allReviews?.slice(0, 3).map((review) => (
+          {allReviews?.slice(0, 3).map(review => (
             <iframe
               key={review._id}
               className="w-full max-w-xs aspect-square"

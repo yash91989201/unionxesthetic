@@ -8,10 +8,10 @@ const TransformationSection = () => {
     useState<TransformationType[]>();
   useEffect(() => {
     fetch("/api/fetchTransformation")
-      .then((res) => res.json())
-      .then((data) => setAllTransformation(data))
-      .catch((err) => {
-        console.log(err);
+      .then(res => res.json())
+      .then(data => setAllTransformation(data))
+      .catch(err => {
+        console.error(err);
       });
   }, []);
   return (
@@ -21,8 +21,8 @@ const TransformationSection = () => {
           Client Transformations
         </p>
         {/* testimony card */}
-        <div className="flex flex-col items-center justify-center space-x-0 space-y-12  md:flex-row md:space-x-8 md:space-y-0">
-          {allTransformation?.map((transformation) => (
+        <div className="flex flex-col items-center justify-center space-x-0 space-y-12 md:flex-row md:space-x-8 md:space-y-0">
+          {allTransformation?.map(transformation => (
             <div
               key={transformation._id}
               className="relative w-56 sm:w-96 aspect-square"

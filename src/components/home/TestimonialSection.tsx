@@ -7,10 +7,10 @@ const TestimonialSection = () => {
   const [allTestimonial, setAllTestimonial] = useState<TestimonialType[]>();
   useEffect(() => {
     fetch("/api/fetchTestimonial")
-      .then((res) => res.json())
-      .then((data) => setAllTestimonial(data))
-      .catch((err) => {
-        console.log(err);
+      .then(res => res.json())
+      .then(data => setAllTestimonial(data))
+      .catch(err => {
+        console.error(err);
       });
   }, []);
   return (
@@ -20,8 +20,8 @@ const TestimonialSection = () => {
           Client Testimonials
         </p>
         {/* testimony card */}
-        <div className="flex flex-col items-center justify-center space-x-0 space-y-8  flex-rap md:flex-row md:space-x-8 md:space-y-0">
-          {allTestimonial?.map((testimonial) => (
+        <div className="flex flex-col items-center justify-center space-x-0 space-y-8 flex-rap md:flex-row md:space-x-8 md:space-y-0">
+          {allTestimonial?.map(testimonial => (
             <div
               key={testimonial._id}
               className="relative w-56 sm:w-72 h-[380px]"

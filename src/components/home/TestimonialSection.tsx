@@ -14,13 +14,13 @@ const TestimonialSection = () => {
       });
   }, []);
   return (
-    <section className="px-6 bg-gray-600 sm:px-12">
+    <section className="px-6 bg-white sm:px-12">
       <div className="max-w-6xl py-16 mx-auto space-y-10 sm:py-20 sm:space-y-20 ">
         <p className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">
           Client Testimonials
         </p>
         {/* testimony card */}
-        <div className="flex flex-col items-center justify-center space-x-0 space-y-8  flex-rap md:flex-row md:space-x-8 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-x-0 space-y-8 flex-rap md:flex-row md:space-x-8 md:space-y-0">
           {allTestimonial?.map((testimonial) => (
             <div
               key={testimonial._id}

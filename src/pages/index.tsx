@@ -1,14 +1,13 @@
-import { NextSeo } from 'next-seo'
-import type { NextPage } from 'next'
+import { NextSeo } from "next-seo";
+import type { NextPage } from "next";
 // custom components
-import HeroSection from '../components/home/HeroSection'
-import WelcomeSection from '../components/home/WelcomeSection'
-import PlansSection from '../components/home/PlansSection'
-import ReviewSection from '../components/home/ReviewSection'
-import BlogPreviewSection from '../components/home/BlogPreviewSection'
-import TransformationSection from '../components/home/TransformationSection'
-import TestimonialSection from '../components/home/TestimonialSection'
-import AboutMe from '../components/home/AboutMe'
+import HeroSection from "../components/home/HeroSection";
+import WelcomeSection from "../components/home/WelcomeSection";
+import PlansSection from "../components/home/PlansSection";
+import ReviewSection from "../components/home/ReviewSection";
+import TransformationSection from "../components/home/TransformationSection";
+import TestimonialSection from "../components/home/TestimonialSection";
+import AboutMe from "../components/home/AboutMe";
 
 const home: NextPage = () => {
   return (
@@ -22,11 +21,10 @@ const home: NextPage = () => {
       <TransformationSection />
       <PlansSection />
       <ReviewSection />
-      <BlogPreviewSection />
       <TestimonialSection />
       <AboutMe />
-    </div >
-  )
-}
+    </div>
+  );
+};
 
-export default home
+export default home;

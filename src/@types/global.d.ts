@@ -1,5 +1,6 @@
 export {};
 
+// these types will be available globally
 declare global {
   type CommentType = {
     approved: boolean;

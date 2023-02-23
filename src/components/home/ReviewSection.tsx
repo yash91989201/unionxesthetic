@@ -8,6 +8,7 @@ const ReviewSection = () => {
       .then(res => res.json())
       .then(data => setAllReviews(data))
       .catch(err => {
+        /*eslint-disable*/
         console.error(err);
       });
   }, []);

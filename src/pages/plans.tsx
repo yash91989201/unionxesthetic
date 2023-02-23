@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 // custom components
 import { PlansSection } from "components/home";
 
-const plans = () => {
+export default function Plans() {
   return (
     <>
       <NextSeo
@@ -12,6 +12,4 @@ const plans = () => {
       <PlansSection />
     </>
   );
-};
-
-export default plans;
+}

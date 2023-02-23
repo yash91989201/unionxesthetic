@@ -1,13 +1,13 @@
 import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { sanityClient, urlFor } from "config/sanity";
-import { GetServerSideProps } from "next";
+import type { GetServerSideProps } from "next";
 
 interface PageProps {
   allTestimonial: TestimonialType[];
 }
 
-const testimonials = ({ allTestimonial }: PageProps) => {
+export default function Testimonials({ allTestimonial }: PageProps) {
   return (
     <>
       <NextSeo
@@ -24,7 +24,7 @@ const testimonials = ({ allTestimonial }: PageProps) => {
             {allTestimonial?.map(testimonial => (
               <div key={testimonial._id} className="relative w-80 h-96">
                 <Image
-                  src={urlFor(testimonial.clientTestimonialImage).url()!}
+                  src={urlFor(testimonial.clientTestimonialImage).url()}
                   alt=""
                   layout="fill"
                 />
@@ -35,9 +35,7 @@ const testimonials = ({ allTestimonial }: PageProps) => {
       </section>
     </>
   );
-};
-
-export default testimonials;
+}
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const query = `

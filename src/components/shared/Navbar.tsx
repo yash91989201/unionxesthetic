@@ -49,17 +49,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/blogs">
-                <a
-                  className={`py-1.5 px-3 ${activeLink(
-                    "/blogs",
-                  )} hover:underline hover:underline-offset-4`}
-                >
-                  Blogs
-                </a>
-              </Link>
-            </li>
-            <li>
               <Link href="/reviews">
                 <a
                   className={`py-1.5 px-3 ${activeLink(

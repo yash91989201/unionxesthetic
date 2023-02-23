@@ -1,26 +1,26 @@
-import {
-  createCurrentUserHook,
-  createClient,
-  SanityClient,
-  ClientConfig,
-} from "next-sanity";
+import { createCurrentUserHook, createClient } from "next-sanity";
 import createImageUrlBuilder from "@sanity/image-url";
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import type { SanityClient } from "next-sanity";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import {
+  NEXT_PUBLIC_SANITY_PROJECT_ID,
+  NODE_ENV,
+  NEXT_PUBLIC_SANITY_DATASET,
+} from ".";
 
-export const config: ClientConfig | any = {
-  dataset: "production",
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  useCdn: process.env.NODE_ENV === "production",
+export const config = {
+  dataset: NEXT_PUBLIC_SANITY_DATASET,
+  projectId: NEXT_PUBLIC_SANITY_PROJECT_ID,
+  useCdn: NODE_ENV === "production",
   apiVersion: "2022-03-25",
 };
 
-// Set up the client for fetching data in the getProps page functions
 export const sanityClient: SanityClient = createClient(config);
 
 export const urlFor = (source: SanityImageSource) =>
   createImageUrlBuilder(config).image(source);
 
 export const useCurentUser = createCurrentUserHook({
-  projectId: config.projectId!,
+  projectId: config.projectId,
   dataset: config.dataset,
 });

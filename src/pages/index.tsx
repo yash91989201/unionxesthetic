@@ -1,18 +1,16 @@
 import { NextSeo } from "next-seo";
-import type { NextPage } from "next";
 // custom components
 import {
   HeroSection,
   WelcomeSection,
   PlansSection,
   ReviewSection,
-  BlogPreviewSection,
   TransformationSection,
   TestimonialSection,
   AboutMe,
 } from "components/home";
 
-const home: NextPage = () => {
+export default function Home() {
   return (
     <div>
       <NextSeo
@@ -24,11 +22,8 @@ const home: NextPage = () => {
       <TransformationSection />
       <PlansSection />
       <ReviewSection />
-      <BlogPreviewSection />
       <TestimonialSection />
       <AboutMe />
     </div>
   );
-};
-
-export default home;
+}

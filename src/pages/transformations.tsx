@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import { sanityClient, urlFor } from "config/sanity";
-import { GetServerSideProps } from "next";
+import type { GetServerSideProps } from "next";
 
 interface PageProps {
   allTransformation: TransformationType[];
 }
 
-const transformations = ({ allTransformation }: PageProps) => {
+export default function Transformations({ allTransformation }: PageProps) {
   return (
     <>
       <NextSeo
@@ -27,7 +27,7 @@ const transformations = ({ allTransformation }: PageProps) => {
                 className="relative w-56 xs:w-64 sm:w-full aspect-square"
               >
                 <Image
-                  src={urlFor(transformation.clientTransformationImage).url()!}
+                  src={urlFor(transformation.clientTransformationImage).url()}
                   alt=""
                   layout="fill"
                 />
@@ -38,9 +38,7 @@ const transformations = ({ allTransformation }: PageProps) => {
       </section>
     </>
   );
-};
-
-export default transformations;
+}
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const query = `

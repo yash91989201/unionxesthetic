@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <section className="px-6 sm:px-12">
+    <section className="px-6 sm:px-12 bg-gray-600">
       <div className="max-w-6xl py-16 mx-auto space-y-10 sm:py-20 sm:space-y-20">
-        <h2 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">
+        <h2 className="text-white text-[clamp(24px,8vw,56px)] font-bold text-center italic">
           About Me
         </h2>
         <div className="flex flex-col items-center space-y-8 lg:flex-row justify-evenly">
@@ -21,7 +21,7 @@ const AboutMe = () => {
               Hi, I am Amaan
             </h3>
             {/* paragraph text */}
-            <p className=" text-[#666666] text-base font-medium leading-relaxed not-italic ">
+            <p className=" text-white text-base font-medium leading-relaxed not-italic ">
               I&apos;m a certified nutrition consultant, a fitness expert, and a
               personal trainer. I have a training experience of 4 years.
               I&apos;ve trained over 100+ clients online. My goal is to help

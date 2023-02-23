@@ -1,12 +1,12 @@
 import { NextSeo } from "next-seo";
 import { sanityClient } from "config/sanity";
-import { GetServerSideProps } from "next";
+import type { GetServerSideProps } from "next";
 
 interface PageProps {
   allReviews: ClientReviewType[];
 }
 
-const reviews = ({ allReviews }: PageProps) => {
+export default function Reviews({ allReviews }: PageProps) {
   return (
     <>
       <NextSeo title="Client Reviews" description="" />
@@ -23,16 +23,14 @@ const reviews = ({ allReviews }: PageProps) => {
                 className="w-full max-w-xs aspect-square"
                 src={review.reviewVideoURL}
                 allow="encrypted-media"
-              ></iframe>
+              />
             ))}
           </div>
         </div>
       </section>
     </>
   );
-};
-
-export default reviews;
+}
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const query = `

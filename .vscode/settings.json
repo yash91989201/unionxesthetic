@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // Format file/s on save
+  "editor.formatOnSave": true,
+  // Use Prettier as default file formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

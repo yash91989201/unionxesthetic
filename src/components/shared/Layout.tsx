@@ -11,7 +11,7 @@ interface PropTypes {
   children: React.ReactNode;
 }
 
-const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({
+const Layout: NextComponentType<NextPageContext, object, PropTypes> = ({
   children,
 }) => {
   const [scrollPopup, setScrollPopup] = useState("hidden");
@@ -78,8 +78,8 @@ const Layout: NextComponentType<NextPageContext, {}, PropTypes> = ({
         <p className="hidden text-xs font-semibold md:block">SCROLL TO TOP</p>
       </button>
       {/* footer */}
-      <footer className="flex items-center justify-center p-4 bg-gray-800">
-        <p className="font-semibold text-center text-gray-200">
+      <footer className="flex items-center justify-center p-4 bg-gray-100">
+        <p className="font-semibold text-center ">
           <small>
             Copyright &copy; {new Date().getFullYear()} Union Xesthetic |
             Yashraj Jaiswal

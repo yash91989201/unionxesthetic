@@ -11,6 +11,7 @@ const TransformationSection = () => {
       .then(res => res.json())
       .then(data => setAllTransformation(data))
       .catch(err => {
+        /*eslint-disable*/
         console.error(err);
       });
   }, []);
@@ -28,7 +29,7 @@ const TransformationSection = () => {
               className="relative w-56 sm:w-96 aspect-square"
             >
               <Image
-                src={urlFor(transformation.clientTransformationImage).url()!}
+                src={urlFor(transformation.clientTransformationImage).url()}
                 alt={transformation.title}
                 layout="fill"
               />

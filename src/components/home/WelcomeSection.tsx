@@ -14,7 +14,7 @@ const WelcomeSection = () => {
               className="w-full aspect-video"
               src="https://youtube.com/embed/qZY0d1-Qzpc"
               allow="encrypted-media"
-            ></iframe>
+            />
           </div>
           <div className="flex flex-col w-full px-0 space-y-6 md:px-6 md:w-1/2">
             <h3 className="text-[clamp(24px,6vw,40px)]  font-semibold italic text-amber-400">

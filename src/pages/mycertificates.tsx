@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const mycertificates = () => {
+export default function MyCertificates() {
   return (
     <section className="px-6 sm:px-12">
       <div className="max-w-6xl py-8 mx-auto space-y-10 sm:py-16 sm:space-y-20 ">
@@ -13,6 +13,4 @@ const mycertificates = () => {
       </div>
     </section>
   );
-};
-
-export default mycertificates;
+}

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint-disable  */
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
@@ -11,6 +12,45 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      colors: {
+        "body-col": "#003351",
+        gray: {
+          50: "#F8FaFc",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          300: "#CBD5E1",
+          400: "#94A3B8",
+          500: "#64748B",
+          600: "#475569",
+          700: "#334155",
+          800: "#1E293B",
+          900: "#0f172A",
+        },
+        primary: {
+          50: "#e8ecf0",
+          100: "#7790a9",
+          200: "#3c6084",
+          300: "#143f6b",
+          400: "#0e2c4b",
+          500: "#0c2641",
+        },
+        secondary: {
+          50: "#feeeee",
+          100: "#f99b9b",
+          200: "#f77070",
+          300: "#f55353",
+          400: "#ac3a3a",
+          500: "#953333",
+        },
+        accent: {
+          50: "#fff7eb",
+          100: "#fed28c",
+          200: "#febe5b",
+          300: "#feb139",
+          400: "#b27c28",
+          500: "#9b6c23",
+        },
+      },
       keyframes: {
         "slide-in-left": {
           "0%": {

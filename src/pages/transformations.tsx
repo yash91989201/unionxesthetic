@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { NextSeo } from "next-seo";
-import { sanityClient, urlFor } from "config/sanity";
+import { sanityClient, urlFor } from "@config/sanity";
 import type { GetServerSideProps } from "next";
 
 interface PageProps {
@@ -16,7 +16,7 @@ export default function Transformations({ allTransformation }: PageProps) {
       />
       <section className="px-3 xs:px-6 sm:px-12">
         <div className="max-w-6xl py-8 mx-auto space-y-10 sm:py-16 sm:space-y-20 ">
-          <h2 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">
+          <h2 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-gray-300">
             Client Transformations
           </h2>
           {/* testimony card */}

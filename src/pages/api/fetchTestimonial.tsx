@@ -1,4 +1,4 @@
-import { sanityClient } from "config/sanity";
+import { sanityClient } from "@config/sanity";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function fetchTestimonial(

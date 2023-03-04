@@ -1,7 +1,7 @@
 import Script from "next/script";
 import type { AppProps } from "next/app";
-import Layout from "components/shared/Layout";
-import { NEXT_PUBLIC_GOOGLE_ANALYTICS } from "config";
+import Layout from "@components/shared/Layout";
+import { NEXT_PUBLIC_GOOGLE_ANALYTICS } from "@config/.";
 import "styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

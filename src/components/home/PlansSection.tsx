@@ -5,7 +5,7 @@ const PlansSection = () => {
     <section className="px-6 sm:px-12">
       <div className="max-w-6xl py-16 mx-auto space-y-10 sm:py-20 sm:space-y-20">
         <div className="space-y-6">
-          <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic">
+          <h4 className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-body-col">
             FITNESS PLANS
           </h4>
           <h2 className="italic font-semibold text-center text-md sm:text-xl">
@@ -15,7 +15,7 @@ const PlansSection = () => {
         {/* cards section */}
         <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-12 place-items-center">
           {/* single card */}
-          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-gray-600 rounded-lg place-self-start">
+          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-body-col rounded-lg place-self-start">
             {/* section 1 */}
             <h2 className="p-4 text-lg font-semibold text-center text-white  sm:text-xl bg-emerald-500">
               4 WEEK PLAN
@@ -36,7 +36,7 @@ const PlansSection = () => {
             </Link>
           </div>
           {/* single card */}
-          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-gray-600 rounded-lg place-self-start">
+          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-body-col rounded-lg place-self-start">
             {/* section 1 */}
             <h2 className="w-full p-4 text-lg font-semibold text-center text-white sm:text-xl bg-emerald-500">
               8 WEEK PLAN
@@ -60,7 +60,7 @@ const PlansSection = () => {
             </Link>
           </div>
           {/* single card */}
-          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-gray-600 rounded-lg place-self-start">
+          <div className="flex flex-col w-full space-y-6 overflow-hidden bg-body-col rounded-lg place-self-start">
             {/* section 1 */}
             <h2 className="w-full p-4 text-lg font-semibold text-center text-white sm:text-xl bg-emerald-500">
               12 WEEK PLAN

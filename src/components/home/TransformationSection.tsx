@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { urlFor } from "config/sanity";
+import { urlFor } from "@config/sanity";
 
 const TransformationSection = () => {
   const [allTransformation, setAllTransformation] =
@@ -16,7 +16,7 @@ const TransformationSection = () => {
       });
   }, []);
   return (
-    <section className="px-6 bg-gray-600 sm:px-12">
+    <section className="px-6 bg-body-col sm:px-12">
       <div className="max-w-6xl py-16 mx-auto space-y-10 sm:py-20 sm:space-y-20 ">
         <p className="text-[clamp(24px,8vw,56px)] font-bold text-center italic text-amber-400">
           Client Transformations

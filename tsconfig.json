@@ -14,9 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      // add paths here other than the direct child folders of src
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
+      "@ui/*": ["./src/components/ui/*"]
     }
   },
   "exclude": ["node_modules"],

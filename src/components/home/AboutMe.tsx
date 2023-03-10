@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <section className="px-6 sm:px-12 bg-gray-600">
+    <section className="px-6 sm:px-12 bg-body-col">
       <div className="max-w-6xl py-16 mx-auto space-y-10 sm:py-20 sm:space-y-20">
         <h2 className="text-white text-[clamp(24px,8vw,56px)] font-bold text-center italic">
           About Me

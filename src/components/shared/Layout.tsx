@@ -77,7 +77,6 @@ const Layout: NextComponentType<NextPageContext, object, PropTypes> = ({
         <MdVerticalAlignTop className="text-xl " />
         <p className="hidden text-xs font-semibold md:block">SCROLL TO TOP</p>
       </button>
-      {/* footer */}
       <footer className="flex items-center justify-center p-4 bg-gray-100">
         <p className="font-semibold text-center ">
           <small>
